@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Primus.Autoamtion.Core.UI/.vs/Primus.Autoamtion.Core.UI
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.AssemblyInfo.cs
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.AssemblyInfoInputs.cache
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.assets.cache
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.GeneratedMSBuildEditorConfig.editorconfig
