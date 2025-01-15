@@ -82,7 +82,9 @@ namespace Primus.Autoamtion.Core.UI.Utility
         }
 
         #endregion
-         public void ActionInitilize()
+        
+        #region Action Class
+ public void ActionInitilize()
         {
             actions = new Actions(driver);
         }
@@ -116,8 +118,6 @@ namespace Primus.Autoamtion.Core.UI.Utility
             ActionInitilize();
             actions.DragAndDrop(webElement,WebElement2).Build().Perform();
         }
-        #region Action Class
-
 
         #endregion
     }
