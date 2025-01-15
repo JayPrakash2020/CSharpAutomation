@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z9MKLA4Zi9A=",
+  "dgSpecHash": "0AFUv76IqIE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
+  "projectFilePath": "C:\\Projects\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JaiPrakashPathak\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\JaiPrakashPathak\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",

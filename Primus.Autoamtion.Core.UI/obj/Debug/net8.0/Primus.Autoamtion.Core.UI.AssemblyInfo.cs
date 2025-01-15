@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Primus.Autoamtion.Core.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1253342c1afeab3ce422eb6d1a7b5379758a85f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c04c663a04cc8dfeecafbd4c7c62fd9cc4c99cff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Primus.Autoamtion.Core.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Primus.Autoamtion.Core.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
