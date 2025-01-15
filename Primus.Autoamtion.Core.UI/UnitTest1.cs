@@ -35,14 +35,18 @@ namespace Primus.Autoamtion.Core.UI
             string registerurl = "https://www.facebook.com/r.php";
 
             helper.RedirectURL(registerurl);
-            helper.SetText("Jay Prakash", "//input[@name='firstname']");
-            helper.SetText("Pathak", "//input[@name='lastname']");
+            helper.SetText("//input[@name='firstname']", "Jay Prakash");
+            helper.SetText("//input[@name='lastname']", "Pathak");
+            helper.MouseHoveronElement("//a[@id='birthday-help']");
+            Thread.Sleep(3000);
             helper.SelectByValue("//select[@id='day']","17");
             helper.SelectByValue("//select[@id='month']", "3");
             helper.SelectByValue("//select[@id='year']", "1988");
             helper.ClickOnRadio("//input[@value='2']");
-            helper.SetText("jayprakashutw@gmail.com", "//input[@name='reg_email__']");
-            helper.SetText("12345678", "//input[@name='reg_passwd__']");
+            helper.ClickandSetText("//input[@name='reg_email__']", "jayprakashutw@gmail.com");
+            helper.SetText("//input[@name='reg_passwd__']","12345678");
+            Thread.Sleep(5000);
+            helper.MoveTOEelemnt("//button[@name='websubmit']");
             Thread.Sleep(5000);
             helper.ClickOnElement("//button[@name='websubmit']");
 
