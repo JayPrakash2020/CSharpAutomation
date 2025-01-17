@@ -30,6 +30,13 @@ namespace Primus.Autoamtion.Core.UI.Utility
             return webElement;
         }
 
+
+        public IList<IWebElement> FindWebElementSByXpath(string xpath)
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+           IList<IWebElement> webelements  = driver.FindElements(By.XPath(xpath));
+            return webelements;
+        }
         public void SetText( string XPath, string text)
         {
             webElement= FindWebElementByXpath(XPath);
@@ -68,6 +75,7 @@ namespace Primus.Autoamtion.Core.UI.Utility
             days.SelectByText(textval);
         }
 
+
         public void SelectByValue(string xpath, string textval)
         {
             webElement = FindWebElementByXpath(xpath);
@@ -82,43 +90,78 @@ namespace Primus.Autoamtion.Core.UI.Utility
         }
 
         #endregion
-         public void ActionInitilize()
+
+        #region Action Class
+        public void ActionInitilize()
         {
             actions = new Actions(driver);
         }
 
         public void MoveTOEelemnt(string xpath)
         {
-            webElement=FindWebElementByXpath(xpath);
+            webElement = FindWebElementByXpath(xpath);
             ActionInitilize();
             actions.MoveToElement(webElement).Build().Perform();
         }
 
-        public void ClickandSetText(string xpath,string value)
+        public void ClickandSetText(string xpath, string value)
         {
-            webElement=FindWebElementByXpath(xpath);
+            webElement = FindWebElementByXpath(xpath);
             ActionInitilize();
             actions.MoveToElement(webElement).Click().SendKeys(value).Build().Perform();
         }
 
-        public void MouseHoveronElement(string xpath) 
+        public void MouseHoveronElement(string xpath)
         {
             webElement = FindWebElementByXpath(xpath);
             ActionInitilize();
             actions.MoveToElement(webElement).Perform();
         }
 
-        public void DragandDrop(string sxpath, string dxpath) 
-        { 
-            webElement=FindWebElementByXpath(sxpath);
-            WebElement2=FindWebElementByXpath(dxpath);  
+        public void DragandDrop(string sxpath, string dxpath)
+        {
+            webElement = FindWebElementByXpath(sxpath);
+            WebElement2 = FindWebElementByXpath(dxpath);
 
             ActionInitilize();
-            actions.DragAndDrop(webElement,WebElement2).Build().Perform();
+            actions.DragAndDrop(webElement, WebElement2).Build().Perform();
         }
-        #region Action Class
 
+        #endregion
 
+        #region dynamic Table Handling
+
+        public int GetTotalColumn(string Xpath)
+        {
+            IList<IWebElement> tablecolumn = FindWebElementSByXpath(Xpath);
+
+            int totalcolumn = tablecolumn.Count;
+
+            return totalcolumn;
+        }
+
+        public int GetTotalRows(string Xpath)
+        {
+            IList<IWebElement> tablerows = FindWebElementSByXpath(Xpath);
+
+            int totalrows = tablerows.Count;
+
+            return totalrows;
+        }
+
+        public void GetTableColumnHeadername(string Xpath)
+        {
+            IList<IWebElement> tablecolumn = FindWebElementSByXpath(Xpath);
+
+            int totalcolumn = tablecolumn.Count;
+
+            foreach(IWebElement element in tablecolumn)
+            {
+                Console.WriteLine("Column Text " + element.Text);
+            }
+        }
+
+       
         #endregion
     }
 }

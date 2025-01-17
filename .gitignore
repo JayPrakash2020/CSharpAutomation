@@ -1,2 +1,17 @@
 
 *.vsidx
+/Primus.Autoamtion.Core.UI/.vs/Primus.Autoamtion.Core.UI/v17/TestStore/0/000.testlog
+/Primus.Autoamtion.Core.UI/.vs/Primus.Autoamtion.Core.UI/v17/.suo
+/Primus.Autoamtion.Core.UI/.vs/Primus.Autoamtion.Core.UI/v17/DocumentLayout.backup.json
+/Primus.Autoamtion.Core.UI/.vs/Primus.Autoamtion.Core.UI/v17/DocumentLayout.json
+/Primus.Autoamtion.Core.UI/bin/Debug/net8.0/nunit_random_seed.tmp
+/Primus.Autoamtion.Core.UI/bin/Debug/net8.0/Primus.Autoamtion.Core.UI.dll
+/Primus.Autoamtion.Core.UI/bin/Debug/net8.0/Primus.Autoamtion.Core.UI.pdb
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/ref/Primus.Autoamtion.Core.UI.dll
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/refint/Primus.Autoamtion.Core.UI.dll
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.AssemblyInfo.cs
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.AssemblyInfoInputs.cache
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.csproj.FileListAbsolute.txt
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.dll
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.pdb
+/Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.sourcelink.json
