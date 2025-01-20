@@ -84,7 +84,7 @@ namespace Primus.Autoamtion.Core.UI.Utility
         #endregion
         
         #region Action Class
- public void ActionInitilize()
+        public void ActionInitilize()
         {
             actions = new Actions(driver);
         }
@@ -119,6 +119,44 @@ namespace Primus.Autoamtion.Core.UI.Utility
             actions.DragAndDrop(webElement,WebElement2).Build().Perform();
         }
 
+        #endregion
+
+        #region Table Handler
+        [10:41, 17/1/2025] JAY PRAKASH: public int GetTotalColumn(string Xpath)
+        {
+            IList<IWebElement> tablecolumn = FindWebElementSByXpath(Xpath);
+
+            int totalcolumn = tablecolumn.Count;
+
+            return totalcolumn;
+        }
+
+        public int GetTotalRows(string Xpath)
+        {
+            IList<IWebElement> tablerows = FindWebElementSByXpath(Xpath);
+
+            int totalrows = tablerows.Count;
+
+            return totalrows;
+        }
+
+        public void GetTableColumnHeadername(string Xpath)
+        {
+            IList<IWebElement> tablecolumn = FindWebElementSByXpath(Xpath);
+
+            int totalcolumn = tablecolumn.Count;
+
+            foreach (IWebElement element in tablecolumn)
+            {
+                Console.WriteLine("Column Text " + element.Text);
+            }
+        }
+        public IList<IWebElement> FindWebElementSByXpath(string xpath)
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            IList<IWebElement> webelements = driver.FindElements(By.XPath(xpath));
+            return webelements;
+        }
         #endregion
     }
 }
