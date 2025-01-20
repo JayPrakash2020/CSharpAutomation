@@ -7,3 +7,4 @@
 /Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.AssemblyInfoInputs.cache
 /Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.assets.cache
 /Primus.Autoamtion.Core.UI/obj/Debug/net8.0/Primus.Autoamtion.Core.UI.GeneratedMSBuildEditorConfig.editorconfig
+*.suo

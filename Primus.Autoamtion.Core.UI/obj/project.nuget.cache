@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2Ccy2devF9M5U+vs0v02BU2nhLv/tU1wgb/dJ/K6F0E27RHyLtFXBUdUHAKiQXbFWuTD1YyMHsfYzePiRYSTtA==",
+  "dgSpecHash": "Io8eyAI/1DpoReDk+SLoZE/4jLp5QU8/RUU5imcVBd+5vtELFLd6wUHNT4eMHMTPXUanjK6Funb/P9zO//zPrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "C:\\Users\\Avinash\\.nuget\\packages\\selenium.webdriver\\4.27.0\\selenium.webdriver.4.27.0.nupkg.sha512",
     "C:\\Users\\Avinash\\.nuget\\packages\\selenium.webdriver.chromedriver\\132.0.6834.8300\\selenium.webdriver.chromedriver.132.0.6834.8300.nupkg.sha512",
     "C:\\Users\\Avinash\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
-    "C:\\Users\\Avinash\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+    "C:\\Users\\Avinash\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\Avinash\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Avinash\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\Avinash\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }
