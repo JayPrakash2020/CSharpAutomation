@@ -122,7 +122,7 @@ namespace Primus.Autoamtion.Core.UI.Utility
         #endregion
 
         #region Table Handler
-        [10:41, 17/1/2025] JAY PRAKASH: public int GetTotalColumn(string Xpath)
+        public int GetTotalColumn(string Xpath)
         {
             IList<IWebElement> tablecolumn = FindWebElementSByXpath(Xpath);
 
