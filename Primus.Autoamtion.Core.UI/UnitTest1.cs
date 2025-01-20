@@ -13,17 +13,20 @@ namespace Primus.Autoamtion.Core.UI
         public void Setup()
         {
             helper.driver= new ChromeDriver();
-            helper.driver.Navigate().GoToUrl("https://www.facebook.com/");
+            helper.driver.Navigate().GoToUrl("https://billing.udeshatechnology.com/");
             helper.driver.Manage().Window.Maximize();
         }
 
         [Test]
         public void LoginPage()
         {
-            helper.SetText("Jay Prakash Pathak","//input[@id='email']");
-            Thread.Sleep(5000);
+            helper.SetText("//input[@id='email']", "rohan@udeshatechnology.com");
+            Thread.Sleep(2000);
 
-            helper.ClickOnElement("//button[@name='login']");
+            helper.SetText("//input[@id='pass']", "1234567890");
+            Thread.Sleep(2000);
+
+            helper.ClickOnElement("//button[text()='Sign In']");
             Thread.Sleep(5000);
             helper.ExitApp();
         }
@@ -51,6 +54,29 @@ namespace Primus.Autoamtion.Core.UI
             helper.ClickOnElement("//button[@name='websubmit']");
 
             helper.ExitApp();
+        }
+
+        [Test]
+        public void DynamicTable()
+        {
+
+            helper.RedirectURL("https://cosmocode.io/automation-practice-webtable/");
+            helper.MoveTOEelemnt("//table[@id='countries']");
+            int columncount = helper.GetTotalColumn("//table[@id='countries']//tbody//tr[1]//td"); // for table column xpath
+            Console.WriteLine("Total column is " + columncount);
+
+
+            int rowcount = helper.GetTotalRows("//table[@id='countries']//tbody//tr");
+
+            Console.WriteLine("Total number of rows is " + rowcount);
+
+            helper.GetTableColumnHeadername("//table[@id='countries']//tbody//tr[1]//td");
+
+
+            helper.ClickOnElement("(//tr//td[contains(text(),'New Delhi')])//..//preceding-sibling::td//input");
+            Thread.Sleep(5000);
+            helper.ExitApp();
+
         }
     }
 }
