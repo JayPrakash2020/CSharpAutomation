@@ -158,5 +158,26 @@ namespace Primus.Autoamtion.Core.UI.Utility
             return webelements;
         }
         #endregion
+
+        #region Browser Helper
+
+        //  it actually return current page title
+        public string GetTitle()
+        {  
+            return driver.Title;
+        }
+
+        // this method will backward your web browser
+        public void NavtoPrevPage()
+        {
+            driver.Navigate().Back();
+        }
+
+        // this method will Forward your web browser
+        public void NavtoNextPage()
+        {
+            driver.Navigate().Forward();
+        }
+        #endregion
     }
 }
