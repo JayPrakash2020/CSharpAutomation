@@ -1,31 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj": {}
+    "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj": {
+    "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
         "projectName": "Primus.Autoamtion.Core.UI",
-        "projectPath": "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
-        "packagesPath": "C:\\Users\\JaiPrakashPathak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JaiPrakashPathak\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\obj\\",
+        "projectPath": "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\Primus.Autoamtion.Core.UI.csproj",
+        "packagesPath": "C:\\Users\\Avinash\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Avinash\\Source\\Repos\\CSharpAutomation\\Primus.Autoamtion.Core.UI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\JaiPrakashPathak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Avinash\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,7 +70,7 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[131.0.6778.26400, )"
+              "version": "[132.0.6834.8300, )"
             },
             "SeleniumExtras.WaitHelpers": {
               "target": "Package",
@@ -96,8 +87,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
