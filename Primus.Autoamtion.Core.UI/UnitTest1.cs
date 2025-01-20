@@ -20,6 +20,7 @@ namespace Primus.Autoamtion.Core.UI
         [Test]
         public void LoginPage()
         {
+            Console.WriteLine("Title of the Page is "+helper.GetTitle());
             helper.SetText("//input[@id='email']", "rohan@udeshatechnology.com");
             Thread.Sleep(2000);
 
@@ -27,7 +28,10 @@ namespace Primus.Autoamtion.Core.UI
             Thread.Sleep(2000);
 
             helper.ClickOnElement("//button[text()='Sign In']");
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
+
+            helper.NavtoPrevPage();
+            Thread.Sleep(3000);
             helper.ExitApp();
         }
 
@@ -38,6 +42,11 @@ namespace Primus.Autoamtion.Core.UI
             string registerurl = "https://www.facebook.com/r.php";
 
             helper.RedirectURL(registerurl);
+
+            Thread.Sleep(2000);
+            helper.NavtoPrevPage();
+            Thread.Sleep(2000);
+            helper.NavtoNextPage();
             helper.SetText("//input[@name='firstname']", "Jay Prakash");
             helper.SetText("//input[@name='lastname']", "Pathak");
             helper.MouseHoveronElement("//a[@id='birthday-help']");
