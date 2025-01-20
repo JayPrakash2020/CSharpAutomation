@@ -1,0 +1,18 @@
+﻿20-Jan-25
+	1. Browser Helper
+		a. GetTitle()
+		b. NavToPrevPage()
+		c. NavToNextPage()
+	2. Wait Explicit
+		Implemented on FindElementByXpath Method
+		Implemented on ClickOnElement
+
+21-Jan-25
+	
+		1.Explicit Wait 
+		2.Assertion
+
+22-Jan-25
+		
+		1. JavaScript Method to handle Different Elements
+	

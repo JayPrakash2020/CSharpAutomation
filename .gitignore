@@ -10,3 +10,8 @@
 *.suo
 /Primus.Autoamtion.Core.UI/bin/Debug
 /Primus.Autoamtion.Core.UI/bin/Debug
+Primus.Autoamtion.Core.UI/bin/Debug/net6.0/nunit_random_seed.tmp
+Primus.Autoamtion.Core.UI/bin/Debug/net6.0/Primus.Autoamtion.Core.UI.dll
+Primus.Autoamtion.Core.UI/bin/Debug/net6.0/Primus.Autoamtion.Core.UI.pdb
+*.pdb
+Primus.Autoamtion.Core.UI/obj/Debug/net6.0/Primus.Autoamtion.Core.UI.dll

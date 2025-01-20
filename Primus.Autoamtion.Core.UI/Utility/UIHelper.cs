@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,18 +16,20 @@ namespace Primus.Autoamtion.Core.UI.Utility
     {
         protected  IWebElement webElement,WebElement2;
         public IWebDriver driver=null;
-        protected WaitHandle wait;
+        protected WebDriverWait wait;
         protected Actions actions;
         public UIHelper()
         {
-           
+            
         }
 
         #region UIWebMethod Handler
         public IWebElement FindWebElementByXpath(string xpath)
         {
-            driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30);
-            webElement = driver.FindElement(By.XPath(xpath));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            //driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30); here I am implention explcit wait so ne need to user Implicit wait
+            //  webElement = driver.FindElement(By.XPath(xpath));
+            webElement = wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
             return webElement;
         }
 
@@ -39,7 +42,8 @@ namespace Primus.Autoamtion.Core.UI.Utility
         public void ClickOnElement(string Xpath)
         {
             //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-            webElement = FindWebElementByXpath(Xpath);  
+            webElement = FindWebElementByXpath(Xpath);
+            webElement = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(Xpath))); ;
             webElement.Click();
         }
 
