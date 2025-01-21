@@ -106,3 +106,4 @@ C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Deb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\Primus.Autoamtion.Core.UI.pdb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\Primus.Autoamtion.Core.UI.genruntimeconfig.cache
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\ref\Primus.Autoamtion.Core.UI.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\FluentAssertions.dll
