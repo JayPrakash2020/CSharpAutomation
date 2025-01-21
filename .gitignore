@@ -15,3 +15,9 @@ Primus.Autoamtion.Core.UI/bin/Debug/net6.0/Primus.Autoamtion.Core.UI.dll
 Primus.Autoamtion.Core.UI/bin/Debug/net6.0/Primus.Autoamtion.Core.UI.pdb
 *.pdb
 Primus.Autoamtion.Core.UI/obj/Debug/net6.0/Primus.Autoamtion.Core.UI.dll
+Primus.Autoamtion.Core.UI/.vs/ProjectEvaluation/primus.autoamtion.core.ui.metadata.v2
+Primus.Autoamtion.Core.UI/.vs/ProjectEvaluation/primus.autoamtion.core.ui.projects.v2
+*.tmp
+*.cache
+*.pdb
+*.props

@@ -20,6 +20,15 @@
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {}
         }
       },
+      "FluentAssertions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/17.8.0": {
         "type": "package",
         "compile": {
@@ -537,6 +546,33 @@
         "lib/net40/SeleniumExtras.WaitHelpers.dll",
         "lib/net45/SeleniumExtras.WaitHelpers.dll",
         "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll"
+      ]
+    },
+    "FluentAssertions/8.0.0": {
+      "sha512": "qVCJIpukyFb9TO9W3vC4/sQF8lfrQksJbo4071uk3YfmHyKKlCZTTpyYhmCnnTZ2LVfFP1JgxM652nolCFjZDw==",
+      "type": "package",
+      "path": "fluentassertions/8.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "LICENSE.md",
+        "fluentassertions.8.0.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/net6.0/FluentAssertions.dll",
+        "lib/net6.0/FluentAssertions.pdb",
+        "lib/net6.0/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml",
+        "tools/init.ps1"
       ]
     },
     "Microsoft.CodeCoverage/17.8.0": {
@@ -1286,6 +1322,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
+      "FluentAssertions >= 8.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 3.14.0",
       "NUnit.Analyzers >= 3.9.0",
@@ -1339,6 +1376,10 @@
           "DotNetSeleniumExtras.WaitHelpers": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

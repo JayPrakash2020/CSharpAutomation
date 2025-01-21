@@ -1,3 +1,4 @@
+using FluentAssertions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -181,6 +182,63 @@ namespace Primus.Autoamtion.Core.UI.Utility
         public void NavtoNextPage()
         {
             driver.Navigate().Forward();
+        }
+        #endregion
+
+        #region Assertion and Wait Helper
+        public void AssertContainTextByXpath(string xpath, string expectedresult)
+        {
+            webElement = FindWebElementByXpath(xpath);
+            webElement.Text.Should().Contain(expectedresult,"Element found using Xpath "+xpath);
+        }
+        public void AreEqualValue(string value1, string value2)
+        {
+            Assert.That(value1, Is.EqualTo(value2));
+        }
+
+        public void WaitUntilElementsExists(string elementxpath)
+        {
+            wait.Until(ExpectedConditions.ElementExists(By.XPath(elementxpath)));
+        }
+
+
+        #endregion
+
+        #region Element with JavaScript Events
+        public void ClickByJS(string xpath)
+        {
+            wait = new WebDriverWait(driver,TimeSpan.FromSeconds(20));
+            try
+            {
+                //wait until element exists
+                wait.Until(ExpectedConditions.ElementExists(By.XPath(xpath)));
+                //wait until element visible
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(xpath)));
+
+                //scroll to the element to view using JavaScript 
+
+                webElement = FindWebElementByXpath(xpath);
+
+                ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);",webElement);
+
+                Task.Delay(TimeSpan.FromSeconds(1)).Wait();
+                //wait until element clickalbe
+                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(xpath)));
+
+                try
+                {
+                    webElement.Click();
+                }
+                catch(ElementClickInterceptedException)
+                {
+                    ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click()", webElement);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepion is "+ex);
+            }
         }
         #endregion
     }

@@ -27,10 +27,12 @@ namespace Primus.Autoamtion.Core.UI
             helper.SetText("//input[@id='pass']", "1234567890");
             Thread.Sleep(2000);
 
-            helper.ClickOnElement("//button[text()='Sign In']");
+            helper.ClickByJS("//button[text()='Sign In']");
             Thread.Sleep(2000);
 
-            helper.NavtoPrevPage();
+            //   helper.AssertContainTextByXpath("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]", "S S Entperprises");
+            helper.AreEqualValue(helper.GetText("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]"), "S S Entperprises");
+
             Thread.Sleep(3000);
             helper.ExitApp();
         }
