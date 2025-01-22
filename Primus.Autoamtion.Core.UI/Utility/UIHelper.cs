@@ -1,5 +1,6 @@
 using FluentAssertions;
 using OpenQA.Selenium;
+using OpenQA.Selenium.DevTools.V131.Page;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -191,6 +192,7 @@ namespace Primus.Autoamtion.Core.UI.Utility
             webElement = FindWebElementByXpath(xpath);
             webElement.Text.Should().Contain(expectedresult,"Element found using Xpath "+xpath);
         }
+        
         public void AreEqualValue(string value1, string value2)
         {
             Assert.That(value1, Is.EqualTo(value2));
@@ -240,6 +242,99 @@ namespace Primus.Autoamtion.Core.UI.Utility
                 Console.WriteLine("Excepion is "+ex);
             }
         }
+
+        public void ScrollToButtom()
+        {
+            ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0,document.body.scrollHeight);");
+        }
+        public void ScrollToTop()
+        {
+            ((IJavaScriptExecutor)driver).ExecuteScript("document.documentElement.scrollTop=0;");
+        }
+
+        #endregion
+
+        #region wait and  retry method
+
+        public void WaitandClickWithRetry(string xpath, int maxRetries=3)
+        {
+            wait =new WebDriverWait(driver,TimeSpan.FromSeconds(5));
+            bool isElementCLicked = false;
+            
+            for(int attempt=1;attempt<=maxRetries;attempt++)
+            {
+                driver.Navigate().Refresh();
+                try
+                {
+                    try
+                      {
+                        webElement= FindWebElementByXpath(xpath);
+                        if(webElement.Displayed && webElement.Enabled)
+                         {
+                           webElement.Click();
+                           Console.WriteLine("Element is CLicked");
+                           isElementCLicked = true;
+                         }
+                      }
+                     catch(NoSuchElementException)
+                     {
+                                
+                     }
+                }
+                
+                catch( WebDriverTimeoutException)
+                {
+                    if(attempt==maxRetries)
+                    {
+                        Console.WriteLine($"Object is not found after {maxRetries} attempts.");
+                        throw;
+                    }
+
+                    Console.WriteLine($"Attempt  {attempt} failded. Retrying ...");
+                }
+            }
+        }
+
+        public void WaitandCheckTextwithRetry(string xpath, string expectedtext, int maxretries=3)
+        {
+            for(int attempt=1;attempt<=maxretries;attempt++)
+            {
+                driver.Navigate().Refresh();
+
+                try
+                {
+                    webElement = FindWebElementByXpath(xpath);
+                    if(webElement.Displayed && webElement.Text.Contains(expectedtext))
+                    {
+                        Console.WriteLine($" Text {expectedtext} found within element");
+                    }
+                    else
+                    {
+                        throw new WebDriverTimeoutException();
+                    }
+                }
+                catch(WebDriverTimeoutException)
+                {
+                    if (attempt == maxretries)
+                    {
+                        Console.WriteLine($"Text {expectedtext} not found after {maxretries} attempts.");
+                        throw;
+                    }
+
+                    Console.WriteLine($"Attempt  {attempt} failded. Text {expectedtext} not found Retrying ...");
+                }
+            }
+        }
+        #endregion
+
+        #region screenshot
+        // to use screenshot method first we need to implement extent report
+        //public void AddScreenShot(IWebDriver driver, ScenarioContext)
+        //{
+        //    ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+        //    Screenshot screenShot = takesScreenshot.GetScreenshot();
+        //    string screenshotlocation = Path.Combine();
+        //}
         #endregion
     }
 }

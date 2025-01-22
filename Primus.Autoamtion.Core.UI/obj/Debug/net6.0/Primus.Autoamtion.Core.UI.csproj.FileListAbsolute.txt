@@ -14,6 +14,10 @@ C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Deb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Primus.Autoamtion.Core.UI.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Primus.Autoamtion.Core.UI.pdb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\ExtentReports.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\System.Web.Razor.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -22,9 +26,13 @@ C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Deb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.TestPlatform.CrossPlatEngine.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.TestPlatform.Utilities.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\MongoDB.Driver.Core.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\RazorEngine.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\WebDriver.Support.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\WebDriver.dll
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
@@ -106,4 +114,3 @@ C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Deb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\Primus.Autoamtion.Core.UI.pdb
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\Primus.Autoamtion.Core.UI.genruntimeconfig.cache
 C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\obj\Debug\net6.0\ref\Primus.Autoamtion.Core.UI.dll
-C:\Users\Avinash\Source\Repos\CSharpAutomation\Primus.Autoamtion.Core.UI\bin\Debug\net6.0\FluentAssertions.dll
