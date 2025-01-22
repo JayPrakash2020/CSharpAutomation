@@ -20,21 +20,30 @@ namespace Primus.Autoamtion.Core.UI
         [Test]
         public void LoginPage()
         {
+            ExtentManager.test = ExtentManager.extent.CreateTest("Test Login","Verify Login Functionality");
             Console.WriteLine("Title of the Page is "+helper.GetTitle());
             helper.SetText("//input[@id='email']", "rohan@udeshatechnology.com");
+            ExtentManager.test.Pass("I am able to enter user name");
             Thread.Sleep(2000);
 
             helper.SetText("//input[@id='pass']", "1234567890");
+            ExtentManager.test.Pass("I am able to enter password");
+
             Thread.Sleep(2000);
 
             helper.ClickByJS("//button[text()='Sign In']");
+            ExtentManager.test.Pass("I am able to Click on Login Button");
+
             Thread.Sleep(2000);
 
             //   helper.AssertContainTextByXpath("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]", "S S Entperprises");
             helper.AreEqualValue(helper.GetText("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]"), "S S Entperprises");
+            ExtentManager.test.Pass("I am able to see COmpany name");
 
             Thread.Sleep(3000);
             helper.ExitApp();
+            ExtentManager.test.Pass("Closing the Broser");
+
         }
 
         [Test]
