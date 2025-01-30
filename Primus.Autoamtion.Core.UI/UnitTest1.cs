@@ -1,51 +1,85 @@
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Primus.Autoamtion.Core.UI.Utility;
 
 namespace Primus.Autoamtion.Core.UI
 {
-    public class Tests:UIHelper
+    [TestFixture]
+    public class Tests : UIHelper
     {
         IWebElement username = null;
         UIHelper helper = new UIHelper();
-       
-        [SetUp]
+        public ExtentReports extent;
+        public ExtentTest test;
+
+
+        [OneTimeSetUp]
         public void Setup()
         {
-            helper.driver= new ChromeDriver();
-            helper.driver.Navigate().GoToUrl("https://billing.udeshatechnology.com/");
+            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            var htmlreport = new ExtentSparkReporter(path);
+            extent = new ExtentReports();
+            extent.AttachReporter(htmlreport);
+            extent.AddSystemInfo("Host Name", "Jay PRakash");
+            extent.AddSystemInfo("Browser", "Chrome");
+            helper.driver = new ChromeDriver();
+            helper.driver.Navigate().GoToUrl("https://news.udeshatechnology.com/");
             helper.driver.Manage().Window.Maximize();
         }
 
         [Test]
         public void LoginPage()
         {
-            ExtentManager.test = ExtentManager.extent.CreateTest("Test Login","Verify Login Functionality");
-            Console.WriteLine("Title of the Page is "+helper.GetTitle());
+            test = extent.CreateTest("Test Login", "Verify Login Functionality");
+            Console.WriteLine("Title of the Page is " + helper.GetTitle());
             helper.SetText("//input[@id='email']", "rohan@udeshatechnology.com");
-            ExtentManager.test.Pass("I am able to enter user name");
+            test.Pass("I am able to enter user name");
             Thread.Sleep(2000);
 
             helper.SetText("//input[@id='pass']", "1234567890");
-            ExtentManager.test.Pass("I am able to enter password");
+            test.Pass("I am able to enter password");
 
             Thread.Sleep(2000);
 
             helper.ClickByJS("//button[text()='Sign In']");
-            ExtentManager.test.Pass("I am able to Click on Login Button");
+            test.Pass("I am able to Click on Login Button");
 
             Thread.Sleep(2000);
 
             //   helper.AssertContainTextByXpath("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]", "S S Entperprises");
             helper.AreEqualValue(helper.GetText("//span[@class='logo-lg']//b[contains(text(),'S S Entperprises')]"), "S S Entperprises");
-            ExtentManager.test.Pass("I am able to see COmpany name");
+            test.Pass("I am able to see COmpany name");
 
             Thread.Sleep(3000);
             helper.ExitApp();
-            ExtentManager.test.Pass("Closing the Broser");
+            test.Pass("Closing the Broser");
 
         }
 
+        [TearDown]
+        public void GetResult()
+        {
+            var status = TestContext.CurrentContext.Result.Outcome.Status;
+            var statustrack = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
+            var errormsg = TestContext.CurrentContext.Result.Message;
+
+            if (status == NUnit.Framework.Interfaces.TestStatus.Failed)
+            {
+                test.Fail(statustrack + errormsg);
+            }
+            //   extent.EndTest(test);
+            helper.ExitApp();
+        }
+
+        [OneTimeTearDown]
+
+        public void EndReport()
+        {
+            extent.Flush();
+
+        }
         [Test]
 
         public void RegisterUser()
@@ -62,12 +96,12 @@ namespace Primus.Autoamtion.Core.UI
             helper.SetText("//input[@name='lastname']", "Pathak");
             helper.MouseHoveronElement("//a[@id='birthday-help']");
             Thread.Sleep(3000);
-            helper.SelectByValue("//select[@id='day']","17");
+            helper.SelectByValue("//select[@id='day']", "17");
             helper.SelectByValue("//select[@id='month']", "3");
             helper.SelectByValue("//select[@id='year']", "1988");
             helper.ClickOnRadio("//input[@value='2']");
             helper.ClickandSetText("//input[@name='reg_email__']", "jayprakashutw@gmail.com");
-            helper.SetText("//input[@name='reg_passwd__']","12345678");
+            helper.SetText("//input[@name='reg_passwd__']", "12345678");
             Thread.Sleep(5000);
             helper.MoveTOEelemnt("//button[@name='websubmit']");
             Thread.Sleep(5000);
@@ -95,6 +129,7 @@ namespace Primus.Autoamtion.Core.UI
 
             helper.ClickOnElement("(//tr//td[contains(text(),'New Delhi')])//..//preceding-sibling::td//input");
             Thread.Sleep(5000);
+            test.Pass("Closing the Broser");
             helper.ExitApp();
 
         }
